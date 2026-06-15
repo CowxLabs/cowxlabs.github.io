@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
 
+  console.log('%c[ Cowx Labs ]%c system initialized', 'color:#c000ff;font-weight:bold', 'color:#b080e0');
+
   window.addEventListener('scroll', () => {
     navbar.style.borderBottomColor = window.scrollY > 20
-      ? 'rgba(0, 240, 255, 0.15)'
-      : 'rgba(0, 240, 255, 0.08)';
+      ? 'rgba(192, 0, 255, 0.2)'
+      : 'rgba(192, 0, 255, 0.08)';
   });
 
   const observer = new IntersectionObserver((entries) => {
