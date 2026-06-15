@@ -49,8 +49,7 @@ body {
 
 .nav-logo-img {
   width: 32px;
-  height: 32px;
-  border-radius: 6px;
+  height: auto;
 }
 
 .nav-logo-text {
@@ -169,9 +168,8 @@ body {
 }
 
 .hero-logo {
-  width: 96px;
-  height: 96px;
-  border-radius: 20px;
+  width: 120px;
+  height: auto;
   margin-bottom: 24px;
   box-shadow: 0 0 40px rgba(0, 240, 255, 0.15);
 }
@@ -383,8 +381,7 @@ body {
 
 .footer-logo {
   width: 24px;
-  height: 24px;
-  border-radius: 4px;
+  height: auto;
 }
 
 .footer-text {
