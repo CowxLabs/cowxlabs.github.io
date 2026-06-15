@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Navbar scroll effect
   const navbar = document.querySelector('.navbar');
+  const modal = document.getElementById('helpModal');
+  const closeBtn = modal.querySelector('.modal-close');
+  const form = modal.querySelector('.contact-form');
+
+  // Navbar scroll effect
   window.addEventListener('scroll', () => {
     navbar.style.borderBottomColor = window.scrollY > 20
       ? 'rgba(0, 240, 255, 0.15)'
@@ -24,8 +28,32 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
+  // Modal open
+  document.querySelectorAll('.help-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Modal close
+  const closeModal = () => {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
   // Contact form handler
-  const form = document.querySelector('.contact-form');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = form.querySelector('.btn');
@@ -36,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = original;
       btn.style.background = '';
       form.reset();
-    }, 2500);
+      closeModal();
+    }, 1500);
   });
 });
