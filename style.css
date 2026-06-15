@@ -47,9 +47,7 @@ body {
   gap: 10px;
 }
 
-.logo-diamond {
-  background: linear-gradient(135deg, #00f0ff, #0066ff, #7000ff);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+.logo-mark {
   flex-shrink: 0;
 }
 
@@ -60,7 +58,7 @@ body {
 }
 
 .nav-logo:hover .nav-logo-img {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 
 .nav-logo-text {
@@ -179,14 +177,15 @@ body {
 }
 
 .hero-logo {
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 28px;
+  display: block;
   filter: drop-shadow(0 0 30px rgba(0, 240, 255, 0.4));
-  animation: diamondPulse 3s ease-in-out infinite;
+  animation: logoPulse 3s ease-in-out infinite;
 }
 
-@keyframes diamondPulse {
+@keyframes logoPulse {
   0%, 100% {
     transform: scale(1);
     filter: drop-shadow(0 0 30px rgba(0, 240, 255, 0.4));
