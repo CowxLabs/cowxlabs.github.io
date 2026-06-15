@@ -23,17 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  const dropdown = document.querySelector('.dropdown-menu');
-  const supportBtn = document.querySelector('.support-btn');
+  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+    const trigger = dropdown.querySelector('a');
+    const menu = dropdown.querySelector('.dropdown-menu');
 
-  supportBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    dropdown.classList.toggle('active');
-  });
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      menu.classList.toggle('active');
+    });
 
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-dropdown')) {
-      dropdown.classList.remove('active');
-    }
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-dropdown')) {
+        menu.classList.remove('active');
+      }
+    });
   });
 });
