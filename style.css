@@ -78,6 +78,21 @@ body {
   color: #00f0ff;
 }
 
+.bmc-link {
+  background: rgba(255, 221, 0, 0.1);
+  border: 1px solid rgba(255, 221, 0, 0.25);
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: #ffdd00 !important;
+  font-weight: 600 !important;
+}
+
+.bmc-link:hover {
+  background: rgba(255, 221, 0, 0.2) !important;
+  border-color: #ffdd00 !important;
+  box-shadow: 0 0 12px rgba(255, 221, 0, 0.15);
+}
+
 /* Hero */
 .hero {
   min-height: 100vh;
