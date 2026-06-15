@@ -48,8 +48,14 @@ body {
 }
 
 .nav-logo-img {
-  width: 32px;
-  height: auto;
+  width: 28px;
+  height: 28px;
+}
+
+.logo-diamond {
+  background: linear-gradient(135deg, #00f0ff, #7000ff);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  flex-shrink: 0;
 }
 
 .nav-logo-text {
@@ -168,10 +174,10 @@ body {
 }
 
 .hero-logo {
-  width: 120px;
-  height: auto;
-  margin-bottom: 24px;
-  box-shadow: 0 0 40px rgba(0, 240, 255, 0.15);
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 24px;
+  box-shadow: 0 0 40px rgba(0, 240, 255, 0.25);
 }
 
 .hero-title {
@@ -380,8 +386,8 @@ body {
 }
 
 .footer-logo {
-  width: 24px;
-  height: auto;
+  width: 20px;
+  height: 20px;
 }
 
 .footer-text {
